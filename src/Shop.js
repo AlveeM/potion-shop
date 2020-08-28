@@ -1,14 +1,24 @@
 import React from 'react'
-import ShopTile from "./ShopTile"
+// import ShopTile from "./ShopTile"
+import PotionTile from "./PotionTile";
+
+// Shop Props (this -> App)
+// props = {
+//   potions: {potions},
+//   addToInventory: {this.addToInventory},
+// }
 
 const Shop = (props) => {
 
   const renderPotions = () => {
     return props.potions.map(potion => {
       return ( 
-        <ShopTile potion={potion} addToInventory={props.addToInventory}>
+        // <ShopTile potion={potion} addToInventory={props.addToInventory}>
+        //   <h4 className="potion-header">{potion.name}</h4>
+        // </ShopTile>
+        <PotionTile potion={potion} handleOnClick={props.addToInventory} cardStyle={"card"}>
           <h4 className="potion-header">{potion.name}</h4>
-        </ShopTile>
+        </PotionTile> 
       )
     })
   }

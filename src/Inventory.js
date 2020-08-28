@@ -1,7 +1,17 @@
 import React from 'react'
 import Purse from "./Purse"
-import InventoryTile from "./InventoryTile"
+// import InventoryTile from "./InventoryTile"
+import PotionTile from "./PotionTile";
 
+// Inventory Props (this -> App)
+// props = {
+//   stopShake={this.stopShake},
+//   shake={this.state.shake},
+//   gold={this.state.gold},
+//   sell={this.sell},
+//   potions={potions},
+//   inventory={this.state.inventory}
+// }
 
 const Inventory = (props) => {
 
@@ -11,9 +21,13 @@ const Inventory = (props) => {
       const potion = props.potions.find(potion => potion.id === item.id)
 
        return (
-        <InventoryTile potion={potion} sell={props.sell}>
+        // <InventoryTile potion={potion} sell={props.sell}>
+        //   <h4>{potion.name} x {item.amount}</h4>
+        // </InventoryTile>
+        <PotionTile potion={potion} handleOnClick={props.sell} cardStyle={"inventory-card"} >
           <h4>{potion.name} x {item.amount}</h4>
-        </InventoryTile>
+        </PotionTile>
+        
       )
     })  
   }

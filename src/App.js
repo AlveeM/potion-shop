@@ -109,4 +109,20 @@ class App extends React.Component {
   }
 }
 
+// // Shop Props
+// props = {
+//   potions: {potions},
+//   addToInventory: {this.addToInventory},
+// }
+
+// // Inventory Props
+// props = {
+//   stopShake={this.stopShake},
+//   shake={this.state.shake},
+//   gold={this.state.gold},
+//   sell={this.sell},
+//   potions={potions},
+//   inventory={this.state.inventory}
+// }
+
 export default App;
